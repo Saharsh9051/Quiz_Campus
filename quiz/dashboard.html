@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Quiz Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <!-- ... (Copy header from index.html, adjust auth buttons for logged-in state) ... -->
+       <!--
+
+       -->
+       
+       
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo-icon.svg" alt="Quiz Campus Icon" class="logo-icon">
+                Quiz Campus
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <span style="margin-right: 15px; color: var(--text-light);">Hi, User!</span>
+                    <a href="index.html" class="btn btn-secondary">Logout</a> <!-- Logout would be handled by backend -->
+                </div>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-container">
+            <div class="container">
+                <div class="dashboard-welcome">
+                    <h2>Welcome to Your Dashboard, Saharsh!</h2>
+                    <p>Here's an overview of your quizzing journey.</p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-history"></i> Recent Activity</h3>
+                        <ul>
+                            <li>Completed "World Capitals" - Score: 8/10</li>
+                            <li>Attempted "Basic Science" - Score: 5/10</li>
+                            <li>Earned "Geography Novice" Badge</li>
+                        </ul>
+                        <a href="quizzes.html" class="btn btn-secondary">Take a New Quiz</a>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-medal"></i> My Badges</h3>
+                        <div style="display: flex; gap: 10px; margin-top:10px;">
+                            <img src="badge-placeholder.svg" alt="Badge 1" title="Geography Novice" style="width:60px; height:60px; background: #eee; border-radius:50%;">
+                            <img src="badge-placeholder.svg" alt="Badge 2" title="Science Starter" style="width:60px; height:60px; background: #eee; border-radius:50%;">
+                            <!-- Add more badges -->
+                        </div>
+                        <p style="font-size:0.9rem; color: var(--text-light); margin-top:10px;">Keep quizzing to earn more!</p>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-chart-bar"></i> Overall Stats</h3>
+                        <ul>
+                            <li>Quizzes Taken: <span class="value">5</span></li>
+                            <li>Average Score: <span class="value">72%</span></li>
+                            <li>Favorite Category: <span class="value">History</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-user-cog"></i> Account</h3>
+                         <ul>
+                            <li>Email: saharsh@example.com</li>
+                            <li>Member Since: May 27,2024</li>
+                        </ul>
+                        <a href="/quiz/profile-view.html" class="btn btn-secondary">Edit Profile</a>
+                        <a href="#" class="btn btn-secondary" style="margin-left:10px;">Change Password</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <!-- ... (Copy footer from index.html) ... -->
+       
+       
+       
+       
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="quick-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Quiz Campus. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

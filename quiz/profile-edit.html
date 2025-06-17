@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Quiz Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo"> <img src="logo-icon.svg" alt="Quiz Campus Icon" class="logo-icon"> Quiz Campus </a>
+            <nav id="main-navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="profile-view.html" class="active">Profile</a></li> {/* Profile section is active */}
+                </ul>
+                <div class="auth-buttons"> <span class="user-greeting">Hi,Saharsh!</span> <a href="index.html" class="btn btn-secondary">Logout</a> </div>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-navigation"> <i class="fas fa-bars"></i> </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Edit Your Profile</h1>
+                <p>Update your personal information.</p>
+            </div>
+        </section>
+
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-layout">
+                    <aside class="profile-sidebar">
+                        <nav class="profile-subnav">
+                            <ul>
+                                <li><a href="profile-view.html"><i class="fas fa-user-circle"></i> Profile Overview</a></li>
+                                <li><a href="profile-edit.html" class="active"><i class="fas fa-edit"></i> Edit Profile</a></li>
+                                <li><a href="profile-password.html"><i class="fas fa-key"></i> Change Password</a></li>
+                                <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> My Dashboard</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <div class="profile-content">
+                        <div class="profile-card form-card">
+                            <h2>Update Your Details</h2>
+                            <form action="#" method="POST" class="profile-form">
+                                <div class="form-group avatar-upload-group">
+                                    <label>Profile Picture</label>
+                                    <div class="avatar-preview-container">
+                                        <img src="avatar-placeholder.png" alt="Current Avatar" id="avatarPreview" class="profile-avatar-preview">
+                                        <input type="file" id="avatarUpload" name="avatarUpload" accept="image/*" style="display: none;">
+                                        <button type="button" class="btn btn-secondary btn-sm" onclick="document.getElementById('avatarUpload').click();">
+                                            <i class="fas fa-upload"></i> Upload New Image
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="fullName">Full Name</label>
+                                    <input type="text" id="fullName" name="fullName" value="Saharsh Sharma" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" value="mithuhno3@gmail.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" name="username" value="saharsh9051">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bio">Short Bio</label>
+                                    <textarea id="bio" name="bio" rows="4" placeholder="Tell us a little about yourself...">Quiz enthusiast and lifelong learner. Loves history and science quizzes.</textarea>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+                                    <a href="profile-view.html" class="btn btn-secondary">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" style="margin-top: 60px;">
+        <!-- ... (Standard Footer) ... -->
+        <div class="container"> <div class="footer-content"> <div class="social-media"> <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> </div> <div class="quick-links"> <a href="#">Terms of Service</a> <a href="#">Privacy Policy</a> <a href="#">Help Center</a> </div> </div> <p class="copyright">© 2025 Quiz Campus. All Rights Reserved.</p> </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Basic avatar preview
+        const avatarUpload = document.getElementById('avatarUpload');
+        const avatarPreview = document.getElementById('avatarPreview');
+        if (avatarUpload && avatarPreview) {
+            avatarUpload.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        avatarPreview.src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Capitals Challenge - Quiz Campus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header>
+        <!-- ... (Copy header from index.html, potentially simplified for quiz focus) ... -->
+        
+        
+        <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="logo-icon.svg" alt="Quiz Campus Icon" class="logo-icon"> <!-- Placeholder for a simple logo icon -->
+                Quiz Campus
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#" class="btn btn-secondary">Login</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+
+        
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo-icon.svg" alt="Quiz Campus Icon" class="logo-icon">
+                Quiz Campus
+            </a>
+            <nav>
+                 <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quizzes.html">Quizzes</a></li>
+                </ul>
+                 <div class="auth-buttons">
+                    <!-- Logged in user might see a profile link here instead -->
+                    <a href="dashboard.html" class="btn btn-secondary">My Dashboard</a>
+                </div>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="quiz-interface-container">
+            <div class="quiz-header">
+                <h2>World Capitals Challenge</h2>
+                <div class="quiz-progress-text">Question 1 / 10</div>
+                <!-- <div class="quiz-timer">Time Left: <strong>00:59</strong></div> -->
+            </div>
+
+            <div class="quiz-progress-bar-container">
+                <div class="quiz-progress-bar" style="width: 10%;"></div>
+            </div>
+
+            <div class="question-area">
+                <p class="question-text">What is the capital of France?</p>
+                <ul class="answer-options">
+                    <li>
+                        <input type="radio" name="q1" id="q1a1" value="Berlin">
+                        <label for="q1a1">A) Berlin</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="q1" id="q1a2" value="Madrid">
+                        <label for="q1a2">B) Madrid</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="q1" id="q1a3" value="Paris">
+                        <label for="q1a3">C) Paris</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="q1" id="q1a4" value="Rome">
+                        <label for="q1a4">D) Rome</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quiz-navigation">
+                <button class="btn btn-secondary" disabled>Previous</button>
+                <!-- This button would change to "Submit Quiz" on the last question -->
+                <a href="quiz-result.html" class="btn btn-primary">Next Question</a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" style="margin-top: 60px;"> <!-- Added margin for better spacing -->
+        <!-- ... (Copy footer from index.html) ... -->
+       
+       <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="quick-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Quiz Campus. All Rights Reserved.</p>
+        </div>
+    </footer>
+       
+       
+       
+       
+       
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="quick-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Quiz Campus. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Basic interaction for quiz options (visual only)
+        const options = document.querySelectorAll('.answer-options input[type="radio"]');
+        options.forEach(option => {
+            option.addEventListener('change', () => {
+                // In a real app, you'd handle the selection state
+                console.log('Selected:', option.value);
+            });
+        });
+    </script>
+</body>
+</html>
